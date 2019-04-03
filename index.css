@@ -1,0 +1,139 @@
+.wrap {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  border: 10px #eb382b solid;
+}
+.wrap::before {
+   content: '';
+   box-sizing: border-box;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 410px;
+   height: 410px;
+   border-radius: 50%;
+   border: 10px #a8261d solid;
+ }
+
+.neddle {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom center;
+}
+
+.hour {
+  width: 8px;
+  height: 100px;
+  background: #666;
+  transform: rotate(90deg);
+}
+
+.minute {
+  width: 6px;
+  height: 130px;
+  background: #666;
+  transform: rotate(60deg);
+}
+
+.second {
+  width: 4px;
+  height: 150px;
+  background: #d06e5d;
+  transform: rotate(0deg);
+}
+.second::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px transparent solid;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: #d06e5d;
+ }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background: #EB382A;
+  border-radius: 50%;
+}
+.number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  height: 100%;
+  width: 100%;
+}
+.clock-number {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  font-size: 25px;
+  box-sizing: border-box;
+  transform: rotate(360deg);
+  padding-top: 15px;
+  height: 50%;
+  width: 30px;
+  transform-origin: bottom center;
+  text-align: center;
+}
+.clock-number::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  content: '';
+  display: block;
+  height: 10px;
+  width: 5px;
+  background: #000;
+  margin-top: 10px;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  height: 100%;
+  width: 100%;
+}
+.dot .sdot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform: rotate(360deg);
+  height: 50%;
+  width: 3px;
+  transform-origin: bottom center;
+}
+.sdot::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  background: #E98A7D;
+  border-radius: 50%;
+  margin-top: 15px;
+}
