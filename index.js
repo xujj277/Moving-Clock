@@ -7,9 +7,13 @@ const length = 12
 const dotLength = 60
 
 for(let i = 0; i < length; i ++) {
-  const oNumber = document.createElement('DIV')
-  oNumber.innerHTML = i + 1
+  let oNumber = document.createElement('DIV')
+  let span = document.createElement('SPAN')
+  span.innerHTML = i + 1
+  oNumber.appendChild(span)
   oNumber.style.transform = `rotate(${(i + 1)*30}deg)`
+  span.style.transform = `rotate(${(i + 1)*(-30)}deg)`
+  span.style.display = 'block'
   oNumber.classList.add('clock-number')
   number.appendChild(oNumber)
 }
